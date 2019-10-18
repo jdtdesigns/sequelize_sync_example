@@ -1,0 +1,37 @@
+<h1>Add a Shop</h1>
+
+<form action="/shops" method="POST">
+  <input type="text" name="name" placeholder="Enter Shop Name">
+  <button>Submit</button>
+</form>
+
+<hr>
+
+<h1>Shop Listing</h1>
+
+<div class="shops">
+  {{#each shops}}
+    <div class="shop">
+      <h3>{{name}}</h3>
+
+      <h4>Add Coffee</h4>
+
+      <form action="/coffees?shop_id={{id}}" method="POST">
+        <input type="text" name="name" placeholder="Enter Coffee Name">
+        <input type="text" name="type" placeholder="Enter Coffee Type">
+        <button>Add Coffee</button>
+      </form>
+
+      <h3>Coffee Listing</h3>
+
+      <div class="coffees">
+        {{#each Coffees}}
+          <div class="coffee">
+            <h4>{{name}}</h4>
+            <h5>{{type}}</h5>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/each}}
+</div>

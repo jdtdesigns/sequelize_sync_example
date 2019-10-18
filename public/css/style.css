@@ -1,0 +1,40 @@
+body {
+  font-family: sans-serif;
+  padding: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+form > * {
+  padding: 6px;
+  margin-bottom: 5px;
+}
+
+.shops {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+}
+
+.shops .shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #555;
+  padding: 10px;
+}
+
+.coffees {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.coffees .coffee {
+  border: 1px solid #555;
+  padding: 5px;
+}
